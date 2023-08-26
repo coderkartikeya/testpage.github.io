@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #304352;  
+    background: -webkit-linear-gradient(to left, #304352, #d7d2cc); 
+    background: linear-gradient(to left, #304352, #d7d2cc);
+    font-family: 'PT Sans', sans-serif;
+    overflow-x: hidden;
+}
+.nav{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: white;
+    
+    font-weight: 600;
+    font-size: 35px;
+    padding: 10px;
+}
+.heading{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 2em;
+    width: 95vw;
+    height: 10vh;
+    color: white;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 3px 3px gray;
+
+
+}
+
+.section{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    row-gap: 20px;
+    
+    
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    filter: drop-shadow(0 0 0.75rem black);
+    /* box-shadow: 3px 4px  3px black; */
+    transition: transform 0.8s;
+
+}
+.card-inner{
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.card-front img{
+    width: 150px;
+    
+
+}
+.card-front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back{
+    backface-visibility: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(11, 139, 224);
+    color: white;
+    opacity: 0.5;
+    transform: rotateY(180deg);
+    border-radius: 2em;
+
+}
+
+
+.card-front:hover{
+    
+    visibility: hidden;
+    transition-duration: .8s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+.card-front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+
+
+
+.middle{
+    margin-top: 5vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw; */
+    /* background-color: #0093E9; */
+}
+
+.heading_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 30px;
+    background-color: #0e78b1;
+    color: white;
+    height: 10vh;
+    border-radius: 1em;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.middle_mentor{
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+}
+.card_2{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 1em;
+    padding: 10px;
+    margin: 10px;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.card_2:hover {
+    background-color: black;
+    transform: scale(1.25);
+    margin: 30px;
+    color: white;
+}
+.card_2 img:hover{
+    background-color: black;
+    color: white;
+}
+.card_2 img{
+    width: 100%;
+    height: 75%;
+    border-radius: 1em;
+    
+
+}
+.info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+.advisor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.advisor button{
+    padding: 10px;
+    background-color: #0093E9;
+    color: white;
+    font-size: 20px;
+    border-radius: 0.25em;
+    border: 0px;
+}
+
+
+@media only screen and (max-width:768px){
+    .nav{
+        font-size: 25px;
+        overflow-x: hidden;
+    }
+    .heading{
+        font-size: 13px;
+        padding: 5px;
+        margin: 10px;
+        height: 20vh;
+        width: 90vw;
+    }
+    .section{
+        grid-template-columns: auto auto;
+        margin-top: 5vh;
+    }
+    .card{
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .card-front img{
+        width: 70px;
+    }
+
+    .middle{
+        width: 100vw;
+        overflow-x: hidden;
+        padding: 5px;
+    }
+
+    .heading_1{
+        font-size: 17px;
+        width: 90vw;
+        
+    }
+    .middle_mentor{
+        grid-template-columns: auto auto;
+    }
+    .card_2{
+        width: 150px;
+        height: 170px;
+        
+    }
+    .info{
+        font-size: 15px;
+    }
+    .advisor button{
+        font-size: 15px;
+    }
+
+}
